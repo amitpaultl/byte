@@ -1,0 +1,75 @@
+/* ---------------------
+reviews area start 
+-----------------------*/
+
+@media (min-width: 991.98px) and (max-width: 1199.99px) { 
+    .bia-reviews-card{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 991.98px) { 
+    .line-5, .line-4{
+        transform: rotate(0deg);
+        left: 0;
+        top: 12px;
+        margin-bottom: 0;
+    }
+
+    .line-2{
+        display: none;
+    }
+
+    .line-4{
+        display: block;
+        left: -27px;
+    }
+
+    .bia-single-service{
+        overflow: visible;
+    }
+}
+
+@media (max-width: 768.98px) { 
+    .line-5, .line-4, .line-2{
+        transform: rotate(0deg);
+        left: 0;
+        top: 12px;
+        margin-bottom: 0;
+    }
+
+    .line-2{
+        display: block;
+    }
+
+    .line-1, .line-3{
+        display: none;
+    }
+
+    .line-4{
+        display: block;
+        left: 0;
+    }
+
+    .bia-single-service{
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 575.99px) {
+
+    .bia-fs-60{
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    .bia-reviews-card{
+        flex-wrap: wrap;
+
+    }
+
+}
+
+/* ---------------------
+reviews area end 
+-----------------------*/

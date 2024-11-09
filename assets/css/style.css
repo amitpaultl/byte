@@ -1,0 +1,752 @@
+/*
+-------------------------------------------------
+  Theme Name: BYTE Intelligent Template
+  Theme URL: 
+  Author: BYTE
+  Creation Date: 7-11-2024
+  Description:A default style sheet for BYTE Intelligent
+  Version: 1.00
+
+
+  ---------------------------------------------------
+  Developed By: BYTE Intelligent
+  Developer URL: amitpaultl@gmail.com
+  Developer: Amit Paul
+
+  ---------------------------------------------------
+
+  --------------------------------------------------
+  Table of Contents
+  --------------------------------------------------
+  1. General CSS
+  2. Typography CSS
+  3. Button CSS
+  4. Preloader Area Start
+  5. Navbar CSS
+  6. Dashboard Page
+  7. Sign Up Page
+  8. Empty Properties Page
+  9. All Property Page
+  10. Property Details Page
+  11. Add Property Page 
+  12. Tenants Page
+  13. Add Tenants Page
+  14. Dashboard Inner Dashboard Layout
+  15. Tenants Details Page
+  16. Billing Center Page
+  17. Documents Page
+  18. Invoice Preview
+  19. Uploaded Documents Common
+  20. Tickets Page CSS
+  21. Default Settings Page
+  22. Color Settings Page
+  23. Tenant Portal Dashboard Page
+  24. Tenant Portal Invoice Details Page
+  25. Tenant Portal Documents Page
+  26. Maintainer Portal Chat Page
+  27. Responsive CSS
+
+------------------------------------------------ */
+
+/*--------------------------------
+1 Theme Color
+-----------------------------------*/
+:root {
+    --Primary-Blue: #188BFE;
+    --Secondary-Green:#88C800;
+    --Title-Black: #050A14;
+    --Paragraph: #697C8F;
+    --White: #fff;
+    --Grey-2: #2D3D50;
+    --Tile-gradient: linear-gradient(322deg, #0B2049 1.82%, #080F1D 97.17%);
+    --Primary-Gradient: linear-gradient(180deg, #188BFE 0%, #035AB0 100%);
+    --body-font-family:  "Roboto", sans-serif;
+}
+
+
+
+/*-----------------------------------------------
+    2. General Style Start
+-------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: var(--Title-Black) none repeat scroll;
+    font-size: 18px;
+    font-weight: normal;
+    font-family: var(--body-font-family);
+    color: var(--Paragraph);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+ul{
+    padding: 0;
+}
+
+li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: var(--White);
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+p{
+    color: var(--Paragraph);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0.27px;
+    margin: 0;
+
+}
+
+
+/*-------------------------------------------
+    3.Typography area start
+-------------------------------------------*/
+
+/* color text */
+
+.bia-white{
+    color: var(--White);
+}
+
+.paragraph{
+    color: var(--Paragraph);
+}
+
+.bia-secondary{
+    color: var(--Secondary-Green);
+}
+
+/* font family */
+
+.bit-fi-lato{
+    font-family: "Lato", serif;
+}
+
+.bit-fi-montserrat{
+    font-family: "Montserrat", serif;
+}
+
+.bit-fi-poppins{
+    font-family: "Poppins", serif;
+
+}
+
+.bit-fi-roboto{
+    font-family: "Roboto", serif;
+
+}
+
+
+
+/* font size  */
+
+.bia-fs-60{
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 105px;
+    letter-spacing: 1.8px;
+    font-family: "Baloo 2", serif;
+}
+
+.bia-fs-48{
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 60px;
+    letter-spacing: .96px;
+}
+
+.bia-fs-40{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 2.3px;
+}
+
+.bia-fs-24{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: 0.48px;
+}
+
+.bia-fs-18{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0.27px;
+}
+
+
+/* font weight  */
+
+.bia-fw-300{
+    font-weight: 300;
+}
+
+.bia-fw-400{
+    font-weight: 400;
+}
+
+.bia-fw-500{
+    font-weight: 500;
+}
+
+.bia-fw-600{
+    font-weight: 600;
+}
+
+.bia-fw-700{
+    font-weight: 700;
+}
+
+.bia-fw-800{
+    font-weight: 800;
+}
+
+.bia-fw-900{
+    font-weight: 900;
+}
+
+
+/* margin area start */
+
+.bia-mb-30{
+    margin-bottom: 30px;
+}
+
+.bia-mb-50{
+    margin-bottom: 50px;
+}
+
+.bia-mb-20{
+    margin-bottom: 20px;
+}
+
+.bia-mb-10{
+    margin-bottom: 10px;
+}
+.bia-mt-10{
+    margin-top: 10px;
+}
+
+.bia-mb-5{
+    margin-bottom: 5px;
+}
+/* padding area start */
+
+.section-padding{
+    padding: 75px 0;
+}
+
+.section-padding-top{
+    padding-top: 75px;
+}
+
+.section-padding-bottom{
+    padding-bottom: 75px;
+}
+
+.bia-px-18{
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.bia-pt-30{
+    padding-top: 30px;
+}
+
+.bia-pb-100{
+    padding-bottom: 100px;
+}
+
+/* border */
+
+
+
+/* gab */
+
+.bia-gab-10{
+    gap: 10px;
+}
+
+
+/*-------------------------------------------
+    3.Typography area end
+-------------------------------------------*/
+
+/*-------------------------------------------
+    4.button area start
+-------------------------------------------*/
+
+.bia-btu-theme{
+    position: relative;
+    padding: 15px 20px;
+    z-index: 1;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px; 
+    letter-spacing: 0.324px;
+    border-radius: 13px;
+    display: inline-block;
+    font-family: "Lato", sans-serif;
+    border: none;
+    transition: .4s;
+    background: var(--Primary-Gradient);
+    color: var(--White);
+    text-align: center;
+}
+
+
+
+
+/*-------------------------------------------
+    4.button area end
+-------------------------------------------*/
+
+/*-------------------------------------------
+    5.menu  area start
+-------------------------------------------*/
+
+.bia-slider-area-start {
+    padding-top: 284px;
+    padding-bottom: 115px;
+}
+
+.bia-menu li a {
+    font-size: 18px;
+    font-family: Lato;
+    color: var(--White);
+    display: inline-block;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0.324px;
+    margin-left: 30px;
+    padding: 15px 0;
+}
+
+.bia-logo img {
+    max-width: 173px;
+    width: 100%;
+    height: auto;
+}
+
+.bia-menu li a.nav-link.active {
+    color: var(--Secondary-Green);
+}
+.bia-menu li a:hover {
+    color: var(--Secondary-Green);
+}
+
+.bia-menu-area {
+    padding: 27px 0;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+/*-------------------------------------------
+    5.menu area end
+-------------------------------------------*/
+
+/*-------------------------------------------
+    6.service area start
+-------------------------------------------*/
+
+.bia-bg-area {
+    border-radius: 20px;
+    border: 2px solid rgba(23, 136, 249, 0.10);
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.08);
+    padding: 26px 50px 50px 50px;
+    background-image: url("../images/service.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.bia-single-service {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 24px;
+}
+
+.line-4{
+    display: none;
+}
+
+.bia-line {
+    position: absolute;
+    top: 50%;
+    right: -50%;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent 50%, var(--Primary-Blue) 50%);
+    background-size: 21px 100%;
+    transform: rotate(90deg);
+    margin-bottom: 24px;
+}
+
+/*-------------------------------------------
+    6.service area end
+-------------------------------------------*/
+
+
+/*-------------------------------------------
+    7.about area end
+-------------------------------------------*/
+
+.about-img-bia {
+    max-width: 453px;
+    height: 453px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 45px;
+}
+
+.bia-image-area {
+    z-index: 1;
+    overflow: hidden;
+    max-width: 498px;
+    border-radius: 20px;
+    width: 100%;
+
+}
+
+.bia-image-area:after {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 453px;
+    height: 453px;
+    border-radius: 20px;
+    content: '';
+    border: 2px solid var(--Secondary-Green);
+    z-index: -1;
+}
+
+.bia-overlay {
+    padding-top: 90px;
+    position: absolute;
+    z-index: 4;
+    width: 342px;
+    border-radius: 342px;
+    background: rgba(136, 200, 0, 0.80);
+    height: 342px;
+    right: -44px;
+    bottom: -78px;
+    padding-left: 37px;
+    padding-right: 39px;
+}
+
+
+
+/*-------------------------------------------
+    7.about area end
+-------------------------------------------*/
+
+/*-------------------------------------------
+    8.main service area start
+-------------------------------------------*/
+
+.bia-main-single-service {
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid rgba(23, 136, 249, 0.07);
+    background: var(--Tile-gradient);
+    padding: 30px;
+    margin-bottom: 24px;
+    transition: .3s;
+}
+
+.bia-main-service-title  {
+    min-height: 80px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.bia-main-single-service:hover {
+    border: 1px solid var(--Primary-Blue);
+    background: linear-gradient(322deg, #0B2049 1.82%, #080F1D 97.17%);
+    box-shadow: 0px 5px 40px 0px rgba(72, 163, 255, 0.25);
+}
+
+/*-------------------------------------------
+    8.main service area end
+-------------------------------------------*/
+
+/*-------------------------------------------
+    8.products area start
+-------------------------------------------*/
+
+.bia-overlay-products{
+    border-radius: 20px;
+    border: 2px solid rgba(23, 136, 249, 0.10);
+    background: rgba(255, 255, 255, 0.02);
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.08);
+    padding: 50px 38px 26px 38px;
+}
+
+.bia-single-products {
+    position: relative;
+    border-radius: 20px;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 24px;
+    transition: .4s;
+}
+
+.bia-info {
+    border-radius: 0px 0px 20px 20px;
+    background: rgba(5, 10, 20, 0.82);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-right: 85px;
+}
+
+.bia-arrow-icon {
+    border-radius: 50%;
+    border: 1px solid rgba(23, 136, 249, 0.07);
+    background: linear-gradient(222deg, rgba(255, 255, 255, 0.01) 11.91%, rgba(255, 255, 255, 0.05) 87.82%);
+    padding: 15px;
+    transition: .4s;
+}
+
+.bia-products-img {
+    height: 100%;
+}
+
+.bia-products-img img {
+    width: 100%;
+    border-radius: 20px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bia-products-arrow {
+    background: var(--Title-Black);
+    border-radius: 50%;
+    border: 1px solid rgba(23, 136, 249, 0.07);
+    padding: 12px;
+    position: absolute;
+    right: -8px;
+    bottom: -8px;
+   
+}
+
+.bia-single-products:hover .bia-arrow-icon {
+    transform: rotate(45deg);
+    border-color: var(--Primary-Blue);
+}
+
+.bia-single-products:hover .bia-arrow-icon svg path {
+    fill: var(--Primary-Blue);
+}
+
+/*-------------------------------------------
+    8.products area end
+-------------------------------------------*/
+
+/*-------------------------------------------
+    9.Our Expertise  area start
+-------------------------------------------*/
+
+.bia-expertise-box {
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid rgba(23, 136, 249, 0.07);
+    background: linear-gradient(328deg, #071227 1.61%, #060E1D 35.58%, #050A14 92.62%);
+    margin-bottom: 24px;
+}
+
+.expertise-w-img{
+    width: 97px;
+    height: 108px;
+}
+
+/*-------------------------------------------
+    9.Our Expertise  area end
+-------------------------------------------*/
+
+/*-------------------------------------------
+    10.reviews  area start
+-------------------------------------------*/
+
+.bia-reviews-card {
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid rgba(23, 136, 249, 0.10);
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.08);
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+}
+
+.bia-slick-slider .col-lg-6{
+    margin: 0 12px;
+}
+
+.reviews-start {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.bia-reviews-img img {
+    border-radius: 20px;
+    max-width: 213px;
+    height: auto;
+}
+
+
+.slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.slick-next {
+    right: -25px;
+}
+
+.slick-prev {
+    left: -25px;
+}
+
+.slick-prev:before {
+    content: "\ea62";
+    font-family: "remixicon" !important;
+    font-style: normal;
+}
+
+/*-------------------------------------------
+    10.reviews  area end
+-------------------------------------------*/
+
+/*-------------------------------------------
+    11.control  area start
+-------------------------------------------*/
+
+.bia-from-card {
+    margin-bottom: 20px;
+}
+
+.bia-form-control {
+    width: 100%;
+    padding: 15px 20px;
+    background: transparent;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px; 
+    letter-spacing: 0.324px;
+    color: var(--Grey-2);
+    border-radius: 7px;
+    border: 1px solid var(--Grey-2);
+}
+
+.bia-form-control:focus {
+    border: 1px solid var(--Primary-Blue);
+}
+
+.bia-form-control::placeholder{
+    color: var(--Grey-2);
+}
+
+/*-------------------------------------------
+    10.control  area end
+-------------------------------------------*/
+
+/*-------------------------------------------
+    11.footer  area end
+-------------------------------------------*/
+
+.footer-bg{
+    background-image: url('../images/footer-bg-1.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.bia-social-account a {
+    font-size: 20px;
+    display: flex;
+    border: 1px solid var(--White);
+    align-items: center;
+    padding: 10px;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    justify-content: center;
+}
+
+.bia-social-account {
+    display: flex;
+    gap: 20px;
+}
+
+.bia-copy-right {
+    border: 2px solid rgba(23, 136, 249, 0.10);
+    padding: 50px 0;
+}
+
+/*-------------------------------------------
+    11.footer  area end
+-------------------------------------------*/
