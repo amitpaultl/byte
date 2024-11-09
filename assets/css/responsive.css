@@ -2,6 +2,37 @@
 reviews area start 
 -----------------------*/
 
+@media (max-width: 991.98px) { 
+    
+}
+
+@media (max-width: 1200.98px) { 
+    .bia-nave{
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        align-content: flex-start;
+    }
+
+    .bia-top-nav-menu {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .bia-sub-menu li a {
+        margin-left: 0;
+    }
+    
+    .bia-sub-menu {
+        text-align: center;
+        width: 100%;
+        background: var(--Title-Black);
+    }
+}
+
 @media (min-width: 991.98px) and (max-width: 1199.99px) { 
     .bia-reviews-card{
         flex-wrap: wrap;
