@@ -143,6 +143,9 @@ p{
     color: var(--Secondary-Green);
 }
 
+.primary{
+    color: var(--Primary-Blue);
+}
 /* font family */
 
 .bit-fi-lato{
@@ -169,7 +172,7 @@ p{
 
 .bia-fs-60{
     font-size: 60px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 105px;
     letter-spacing: 1.8px;
     font-family: "Baloo 2", serif;
@@ -241,6 +244,9 @@ p{
     margin-bottom: 30px;
 }
 
+.bia-mb-80{
+    margin-bottom: 80px;
+}
 .bia-mb-50{
     margin-bottom: 50px;
 }
@@ -263,6 +269,14 @@ p{
 
 .section-padding{
     padding: 75px 0;
+}
+
+.section-padding-top-150{
+    padding-top: 150px;
+}
+
+.section-padding-bottom-150{
+    padding-bottom: 150px;
 }
 
 .section-padding-top{
@@ -305,7 +319,7 @@ p{
     4.button area start
 -------------------------------------------*/
 
-.bia-btu-theme{
+.bia-btn-theme{
     position: relative;
     padding: 15px 20px;
     z-index: 1;
@@ -322,6 +336,26 @@ p{
     background: var(--Primary-Gradient);
     color: var(--White);
     text-align: center;
+}
+
+.bia-btn-border-btn{
+    position: relative;
+    padding: 15px 20px;
+    z-index: 1;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px; 
+    letter-spacing: 0.324px;
+    border-radius: 13px;
+    display: inline-block;
+    font-family: "Lato", sans-serif;
+    border: none;
+    transition: .4s;
+    background: transparent;
+    color: var(--White);
+    text-align: center;
+    border: 1px solid var(--White); 
 }
 
 
@@ -366,12 +400,15 @@ p{
 }
 
 .bia-menu-area {
-    padding: 27px 0;
+    padding: 20px 0;
     transition: .2s;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 11111;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.20);
+
 }
 
 .bia-fixed{
@@ -387,9 +424,24 @@ p{
 /* banner img */
 
 .bia-header-area{
-    /* background-image: url(../images/banner-bg.png); */
-    background-position: center ;
-    background-size: cover;
+    background-image: url(../images/banner-bg-1.png);
+    background-position: center top;
+    background-size: 1100px;
+    position: relative;
+    z-index: 999999999;
+    background-repeat: no-repeat;
+}
+
+.bia-header-area::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-image: url('../images/bg-hero.png');
+    z-index: -1;
+    background-repeat: no-repeat;
 }
 
 .menu-icon-w {
@@ -399,180 +451,10 @@ p{
     border-radius: 15px;
 }
 
-/*  */
-/*  */
-/*  */
-
-
-
-.bia-main {
-  width: 500px;
-  height: 500px;
-  margin-left: 15px;
-  position: relative;
+.bia-banner-area img {
+    width: 100%;
+    height: auto;
 }
-.big-circle {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  border: 1px solid var(--Grey-2);
-  border-radius: 50%;
-  display: flex;
-  display: -webkit-flex;
-  align-items: center;
-  -webkit-align-items: center;
-  justify-content: center;
-  -webkit-justify-content: center;
-  animation: Rotate 20s linear infinite;
-  -webkit-animation: Rotate 20s linear infinite;
-}
-.icon-block {
-  width: auto;
-  height: 64px;
-  position: absolute;
-  border-radius: 50%;
-  display: flex;
-  display: -webkit-flex;
-  align-items: center;
-  -webkit-align-items: center;
-  justify-content: center;
-  -webkit-justify-content: center;
-
-}
-.icon-block img {
-  margin: 0px auto;
-  width: 86%;
-  animation: Rotate-reverse 20s linear infinite;
-  -webkit-animation: Rotate-reverse 20s linear infinite;
-}
-.icon-block:first-child {
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-}
-.icon-block:nth-child(2) {
-  top: 50%;
-  right: 0;
-  transform: translate(50%, -50%);
-  -webkit-transform: translate(50%, -50%);
-}
-.icon-block:nth-child(3) {
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  -webkit-transform: translate(-50%, 50%);
-}
-.icon-block:nth-child(4) {
-  top: 50%;
-  left: 0;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-}
-/* circle content */
-.circle {
-  animation: circle-rotate 20s linear infinite;
-  -webkit-animation: circle-rotate 20s linear infinite;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-  width: 65%;
-  height: 65%;
-  border: 1px solid var(--Grey-2);
-  border-radius: 50%;
-}
-.circle .icon-block img {
-  animation: img-rotate 20s linear infinite;
-  -webkit-animation: img-rotate 20s linear infinite;
-}
-/* center logo */
-.center-logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-}
-.center-logo img {
-  max-width: 200px;
-}
-
-/* keyframe animation */
-
-@keyframes Rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes Rotate {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-@keyframes Rotate-reverse {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-
-@-webkit-keyframes Rotate-reverse {
-  from {
-    -webkit-transform: rotate(360deg);
-  }
-  to {
-    -webkit-transform: rotate(0deg);
-  }
-}
-
-@keyframes circle-rotate {
-  from {
-    transform: translate(-50%, -50%) rotate(45deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(405deg);
-  }
-}
-
-@-webkit-keyframes circle-rotate {
-  from {
-    -webkit-transform: translate(-50%, -50%) rotate(45deg);
-  }
-  to {
-    -webkit-transform: translate(-50%, -50%) rotate(405deg);
-  }
-}
-
-@keyframes img-rotate {
-  from {
-    transform: rotate(-45deg);
-  }
-  to {
-    transform: rotate(-405deg);
-  }
-}
-
-@-webkit-keyframes img-rotate {
-  from {
-    -webkit-transform: rotate(-45deg);
-  }
-  to {
-    -webkit-transform: rotate(-405deg);
-  }
-}
-
 
 /*-------------------------------------------
     5.menu area end
@@ -889,11 +771,11 @@ p{
 }
 
 .slick-next {
-    right: -30px;
+    right: -42px;
 }
 
 .slick-prev {
-    left: -30px;
+    left: -60px;
 }
 
 .slick-dots li button {
@@ -1010,6 +892,207 @@ p{
     10.control  area end
 -------------------------------------------*/
 
+
+/*-------------------------------------------
+    11.about page  area end
+-------------------------------------------*/
+
+.bg-image-title{
+    background-image: url('../images/working\ 1.png');
+}
+
+.bia-banner-inner-page{
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    position: relative;
+    padding-top: 217px;
+    padding-bottom: 87px;
+}
+
+.bia-banner-inner-page::after{
+    background-image: url('../images/Subtract.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 1300px;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    content: ' ';
+    top: 0;
+
+}
+
+.bg-color-title::before{
+    background: var(--Tile-gradient);
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    opacity: 0.85;
+    height: 100%;
+    left: 0;
+    content: ' ';
+    top: 0;
+
+}
+
+.bia-stroy {
+    margin-left: auto;
+    text-align: end;
+}
+
+.bia-stroy::after{
+    left: 0;
+    right: auto;
+}
+
+.bia-stroy-overlay {
+    left: -44px;
+    right: auto;
+    text-align: left;
+    padding-left: 86px;
+    padding-right: 0;
+}
+
+.team-img {
+    width: 100%;
+    border-radius: 20px;
+    height: 171px;
+    object-fit: cover;
+}
+
+.bit-single-team {
+    border-radius: 20px;
+    border: 2px solid rgba(23, 136, 249, 0.07);
+    background: linear-gradient(328deg, #071227 1.61%, #060E1D 35.58%, #050A14 92.62%);
+    padding: 30px;
+}
+
+.main-bg-area{
+    background-image: url('../images/Subtract-bg.png');
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 650px;
+}
+
+/*-------------------------------------------
+    11.about page  area end
+-------------------------------------------*/
+
+/*-------------------------------------------
+    12.details page  area start
+-------------------------------------------*/
+
+.bia-details-img img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.bit-card-product {
+    border-radius: 20px;
+    border: 2px solid rgba(23, 136, 249, 0.07);
+    background: linear-gradient(328deg, #071227 1.61%, #060E1D 35.58%, #050A14 92.62%);
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.box-text-bia {
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0px 10px;
+}
+
+/*-------------------------------------------
+    12.details page  area end
+-------------------------------------------*/
+
+/*-------------------------------------------
+    13.contact page  area start
+-------------------------------------------*/
+
+.main-left-bg-area{
+    background-image: url('../images/bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1200px;
+}
+
+.bg-image-title-contact{
+    background-image: url('../images/contact-bg.png');
+}
+
+.bia-contact-from-box {
+    border-radius: 20px;
+    border: 2px solid rgba(23, 136, 249, 0.10);
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+}
+
+.bia-contact-from {
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0.324px;
+    width: 100%;
+    border-radius: 7px;
+    border: 1px solid var(--Grey-2);
+    background: transparent;
+    padding: 10px 20px;
+    color:  var(--Grey-2);
+}
+
+.bia-contact-from:focus{
+    border: 1px solid var(--Primary-Blue);
+    background: #080F1E;
+    box-shadow: 0px 5px 15px 0px rgba(72, 163, 255, 0.15);
+} 
+
+.bia-contact-from::placeholder{
+    color:  var(--Grey-2);
+}
+
+.bd-bit-contact {
+    border-radius: 20px;
+    border: 2px solid rgba(23, 136, 249, 0.10);
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.08);
+    padding: 50px;
+}
+
+.bia-manually-wrapper {
+    display: flex;
+    gap: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.line-bg-border {
+    position: absolute;
+    top: 50%;
+    right: -50%;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent 50%, var(--Primary-Blue) 50%);
+    background-size: 21px 100%;
+    transform: rotate(90deg);
+}
+
+
+.wrapper-ml {
+    margin-left: 40px;
+}
+
+/*-------------------------------------------
+    13.contact page  area end
+-------------------------------------------*/
+
 /*-------------------------------------------
     11.footer  area end
 -------------------------------------------*/
@@ -1018,6 +1101,8 @@ p{
     background-image: url('../images/footer-bg-1.png');
     background-position: center;
     background-size: cover;
+    border-top: 2px solid rgba(23, 136, 249, 0.10);
+    ;
 }
 
 .bia-social-account a {
@@ -1041,6 +1126,8 @@ p{
     border: 2px solid rgba(23, 136, 249, 0.10);
     padding: 50px 0;
 }
+
+
 
 /*-------------------------------------------
     11.footer  area end

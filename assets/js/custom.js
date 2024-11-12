@@ -48,5 +48,23 @@ $('.multiple-items').slick({
  slider area end
 ---------------------------*/
 
+/*------------------------
+ slider area start
+---------------------------*/
+
+$('.banner-items').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    autoplay: false,
+    autoplaySpeed: 3000,
+    
+});
+
+/*------------------------
+ slider area end
+---------------------------*/
+
 
 })(jQuery);
